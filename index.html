@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Meta tags SEO y Open Graph -->
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Curso Virtual de Sagrada Familia - Aprende fácilmente desde casa con la experta Esperanza Osorio">
+
+
+
+   
+    <meta property="og:title" content="Curso Premium de Sagrada Familia">
+    <meta property="og:description" content="Domina el arte de la costura decorativa con nuestro curso virtual">
+    <meta property="og:image" content="https://ejemplo.com/imagen-curso.jpg">
+    
+    <!-- Enlaces a fuentes y librerías -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <title>Curso Premium Sagrada Familia</title>
+    
+    <style>
+        /* Estilos base y reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Paleta de colores */
+      
+            :root {
+                
+    --color-primario: #4A306D;   /* Morado profundo - elegancia */
+    --color-secundario: #7E57C2;  /* Morado vibrante - acción */
+    --color-fondo: #F8F5FF;      /* Blanco lavanda - suave */
+    --color-texto: #2A0944;      /* Morado casi negro - contraste */
+    --color-accento: #C86BFC;    /* Morado neón - destacados */
+    --color-vidrio: rgba(248, 245, 255, 0.85); /* Fondo glassmorphism */
+}
+
+        
+
+      
+
+        body {
+            background: linear-gradient(135deg, var(--color-fondo) 0%, #EDE7F6 100%);
+            line-height: 1.6;
+            color: var(--color-texto);
+        }
+
+        /* Estilo Glassmorphism 2.0 */
+        .glass-card {
+            background: var(--color-vidrio);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(122, 87, 194, 0.15);
+
+
+
+            
+            padding: 2rem;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+
+
+
+
+
+        /* Estructura header */
+        .header {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: linear-gradient(45deg, var(--color-primario), var(--color-secundario));
+            color: rgb(255, 255, 255);
+        }
+
+ /* Nuevos estilos para header */
+
+
+        /* Nuevas secciones diferenciadas */
+        .seccion-diferenciada {
+            padding: 4rem 1rem;
+            margin: 2rem 0;
+            background: linear-gradient(45deg, rgba(255,235,243,0.1), rgba(255,245,235,0.1));
+        }
+
+        .facilidad-curso {
+            background: rgba(255, 255, 255, 0.9);
+            border-left: 5px solid var(--color-primario);
+        }
+
+        /* Nueva sección de emprendimiento */
+        .seccion-emprende {
+            background: linear-gradient(45deg, var(--color-primario), #8A2BE2);
+            color: white;
+            text-align: left;
+            padding: 4rem 1rem;
+        }
+
+
+
+
+
+        .precio {
+            font-size: 1.5rem;
+            margin: 0.5rem 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            color: rgb(181, 23, 157);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin: 1rem 0;
+            transition: transform 0.3s;
+        }
+
+        .btn-whatsapp:hover {
+            transform: scale(1.05);
+        }
+
+        /* Secciones */
+        .seccion {
+            padding: 3rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Testimonios */
+        .testimonio-card {
+            display: flex;
+            align-items: center;
+            margin: 1rem 0;
+            padding: 1.5rem;
+        }
+
+        .testimonio-img {
+            width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 1rem;
+        }
+
+        /* Formulario */
+        .formulario-contacto {
+            max-width: 500px;
+            margin: 0.2rem auto;
+        }
+
+      
+
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+          
+            .testimonio-card { flex-direction: column; text-align: center; }
+            .testimonio-img { margin-bottom: 1rem; }
+        }
+
+        @keyframes moverFlecha {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(6px); /* Puedes ajustar la distancia */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+        #flechaabajo {
+    animation: moverFlecha 1s ease-in-out infinite;
+  }
+
+  .imagen-destacada {
+  display: inline-block;
+  position: relative;
+  margin: 20px;
+}
+
+.imagen-circular {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 3px solid white;
+  box-shadow: 0 0 25px 5px rgba(255, 255, 255, 0.6),
+             0 0 15px 3px rgba(255, 255, 255, 0.4) inset;
+  transform: translateY(-10%);
+  overflow: hidden;
+}
+
+
+    </style>
+
+
+<!-- Hotjar Tracking Code for Esperanzarte Web -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:5306007,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+
+<!-- Meta Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '921520455932559');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=921520455932559&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+
+
+</head>
+<body>
+
+
+ <!-- Header mejorado -->
+ <header class="header" >
+    <div data-aos="zoom-in"  >
+        <h1 style="font-size: 1.4rem;">¡Crea una Sagrada Familia!</h1>
+        <p style="font-size: 1.1rem;">Convierte tu creatividad en una pieza única de lujo</p>
+        <br>
+        <div class="imagen-destacada">
+            <img src="Imagenes/SF.jpg" alt="Sagrada Familia" class="imagen-circular">
+          </div>
+        <!-- Resto del header -->
+ <!-- Lista de beneficios -->
+ <div class="glass-card" style="margin: 0.1rem auto; max-width: 500px;color: #2A0944;">
+    <p><i class="fas fa-chalkboard-teacher"></i> Modalidad Virtual | <i class="fas fa-mobile-alt"></i> Acceso Ilimitado</p></p>
+     <br>
+    <p> El curso incluye:</p>
+<br>
+    <p> 📹Video tutorial  | 📄 Moldes | ✅ Asesoría personalizada  </p>
+    
+    
+    <!-- Precio con descuento -->
+    <div class="precio">
+        <span style="text-decoration: line-through; font-size: 1rem;">Antes: $120.009</span> 
+        <span style= "font-size: 1.3rem;">Ahora: $69.000</span>
+    </div>
+    
+    <!-- Botón principal -->
+    <a href="https://wa.me/573166181291?text=Hola%20quiero%20más%20información%20del%20curso%20SagradaFamilia" 
+       class="btn-whatsapp">
+       QUIERO APRENDER <i class="fab fa-whatsapp"></i>
+    </a>
+    <p style="font-size: 0.8rem;">⏳ Promoción válida hasta el 7 de marzo ⏳</p>
+    <br>
+    <i class="fa-solid fa-chevron-down" style="font-size: 2.2rem; color:#9f00a5;"  id="flechaabajo"></i>
+    
+
+</div>
+
+    </div>
+</header>
+
+
+
+
+
+
+    <!-- Sección Por qué aprender -->
+    <section class="seccion">
+        <h2 >¿Por qué aprender con nosotros?</h2>
+        <br>
+        <h3 data-aos="fade-up">El proyecto es muy fácil de realizar y recibes: </h3>
+        <br>
+        <div class="glass-card" data-aos="fade-right">
+           
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+               
+                <div>
+                   
+                    <h3>📹 Video Tutorial</h3>
+                    <p>Explicaciones claras que puedes ver cuando quieras</p>
+                </div>
+
+                <div>
+                   
+                    <h3 >📏 Medidas Exactas </h3>
+                    <p >Patrones precisos para que todo quede perfecto.</p>
+                </div>
+
+                <div>
+                   
+                    <h3 >👩🏻‍🏫 Asesoría Personalizada</h3>
+                    <p >Si tienes alguna consulta, puedes realizar preguntas.</p>
+                </div>
+
+                <div>
+                
+                   
+                <h3 class="beneficio-titulo">👤 Contactos de proveedores</h3>
+                <p class="beneficio-texto">Adquiere los rostros desde cualquier parte de Colombia 🇨🇴.</p>
+
+                </div>
+
+                <!-- Más características aquí -->
+            </div>
+        </div>
+    </section>
+
+
+ <!-- Nueva sección de facilidades -->
+ <section class=" seccion seccion-diferenciada">
+    <div class="glass-card facilidad-curso " data-aos="fade-up">
+        <h2>¡No importa si no tienes experiencia, este curso es para todos los niveles!</h2>
+        <div   style="display: grid; gap: 1.5rem; margin-top: 2rem;">
+            <div class="ventaja" >
+               
+                <h3>  <i class="fa-solid fa-hand-holding-heart fa-1x" style="color: var(--color-primario);"></i> Todo lo que necesitas lo consigues fácilmente:</h3>
+               <br>
+                <ul style="list-style: none;">
+                    <li>🧵 Telas, en almacenes de telas.</li>
+                    <li>✂️ Demás insumos, en tiendas de manualidades.</li>
+                    <li>👥 Rostros en ceramica, te damos el contacto del proveedor.</li>
+                </ul>
+
+                <p></p>
+            </div>
+            
+            <div class="ventaja">
+                
+                <h3> <i class="fa-solid fa-star fa-1x" style="color: var(--color-primario);"></i> ¡La obra es perfecta para cualquier espacio!</h3>
+                <br>
+                <p>Aprenderás a crear Sagradas Familias desde 50cm hasta 1.5 metros.</p>
+              
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de emprendimiento -->
+<section class=" seccion-emprende" data-aos="fade-up">
+    <div  class="seccion" class="glass-card" style="background: rgba(255,255,255,0.1);">
+        <h2 style="font-size: 1.4rem;">¡Transforma tu Creatividad en Resultados!</h2>
+        <p style="font-size: 1.2rem; margin: 1.5rem 0;">
+            
+            ✨ Decora tu hogar con una pieza única o <br>
+            💼 ¡Crea tu propio negocio y aumenta tus ingresos!
+        </p>
+
+        
+
+
+        <a href="https://wa.me/573166181291?text=Hola%20tengo%20interés%20en%20el%20curso%20Sagrada%20Familia✨"
+
+           class="btn-whatsapp" 
+           style="font-size: 1rem; padding: 1.2rem 3rem;">
+           ¡Empieza ahora! <i class="fas fa-arrow-right"></i>
+        </a>
+        <p style="margin-top: 1rem;">🚀 Cupos limitados - Inicia hoy mismo</p>
+    </div>
+</section>
+
+
+
+    <!-- Testimonios -->
+    <section class="seccion">
+        <h2 data-aos="fade-up">Lo que dicen nuestras alumnas</h2>
+        <div class="testimonio-card glass-card" data-aos="flip-left">
+            <img src="https://images.pexels.com/photos/7118201/pexels-photo-7118201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+            alt="Foto de Carmen" class="testimonio-img">
+            <div>
+                <p>"A mis 65 años pensé que no podría porque la tecnologia me atropella jaja, pero la verdad es muy fácil todo!"</p>
+                <p><strong>Clara Martínez, Bogotá</strong></p>
+            </div>
+        </div>
+        <!-- Segundo testimonio -->
+        <div class="testimonio-card glass-card" data-aos="flip-left">
+            <img src="https://images.pexels.com/photos/6314568/pexels-photo-6314568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                alt="Foto de Carmen" class="testimonio-img">
+            <div>
+                <p>"La atención por WhatsApp es maravillosa, me guiaron en cada paso sin prisas. ¡Recomendado 100%!"</p>
+                <p><strong>Rosa T, Cali</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de contacto -->
+    <section class="seccion">
+        <div class="formulario-contacto glass-card" data-aos="zoom-in">
+            <h2>¿Tienes dudas? Escríbenos</h2>
+           
+            <a style="font-size: 2rem;" href="https://wa.me/573166181291?text=Hola,%20tengo%20una%20consulta%20sobre%20el%20curso💖"> 3166181291</a>
+      
+            <i class="fa-brands fa-whatsapp" style="font-size: 2rem;"></i>
+        </div>
+    </section>
+
+    <!-- Sección profesora actualizada -->
+    <section class="seccion">
+        <div class="glass-card" data-aos="flip-up" style="background: rgba(255,245,240,0.9);">
+            <h2>Conoce a tu Maestra</h2>
+            <img src="Imagenes/PROFE.jpeg" alt="Esperanza Osorio" 
+                     style="width: 150px; border-radius: 50%; border: 3px solid white;">
+                     
+            <div style="display: flex; gap: 2rem; align-items: center; margin-top: 2rem;">
+                
+                <div>
+                    
+                    <h3 style="color: var(--color-primario);">Esperanza Osorio</h3>
+                    <p style="font-size: 1.1rem;">
+                        👩 Diseñadora de modas con 35+ años de experiencia<br>
+                        🏡 De Palmira, Valle del Cauca<br>
+                        🎓 Formadora de más de 500 alumnas<br>
+                        💖 Especialista en manualidades y costura creativa
+                    </p>
+                    <p style="margin-top: 1rem; font-style: italic;">
+                        "Mi pasión es enseñar a mujeres como tú a crear belleza con sus manos"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: false });
+        
+        // Validación formulario
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const telefono = document.querySelector('input[type="tel"]').value;
+            if(telefono.length === 10) {
+                window.open(`https://wa.me/573166181291?text=Hola,%20tengo%20una%20consulta%20sobre%20el%20curso`);
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+   
+
+   
+
