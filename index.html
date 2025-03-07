@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -23,7 +24,7 @@
     <title>Curso Sagrada Familia Esperanzarte </title>
     
     <style>
-        /* Estilos base y reset */
+        /* Reset y estilos base */
         * {
             margin: 0;
             padding: 0;
@@ -31,186 +32,193 @@
             font-family: 'Arial', sans-serif;
         }
 
-        /* Paleta de colores */
-      
-            :root {
-                
-    --color-primario: #cbacb0;   /* Rojo bordo profundo - elegancia */
-    --color-secundario: #8B2635;  /* Rojo vino - acción */
-    --color-fondo: #FAF3F3;      /* Blanco rosado - suave */
-    --color-texto: #330D0D;      /* Rojo casi negro - contraste */
-    --color-accento: #D4374D;    /* Rojo vibrante - destacados */
-    --color-vidrio: rgba(250, 235, 235, 0.85); /* Fondo glassmorphism */
-
-}
-
-        
-
-      
+        /* Paleta neomórfica con acentos bordo */
+        :root {
+            --color-base: #f7eef0;
+            --color-acento: #8B2635;
+            --color-texto: #3d1218;
+            --shadow-ext: 12px 12px 24px #e2d5d7,
+                         -12px -12px 24px #ffffff;
+            --shadow-inset: inset 5px 5px 10px #e2d5d7,
+                          inset -5px -5px 10px #ffffff;
+            --border-bordo: 2px solid rgba(139, 38, 53, 0.1);
+            --radius: 30px;
+        }
 
         body {
-            background: linear-gradient(135deg, var(--color-fondo) 0%, #c4c4c4 100%);
-            line-height: 1.6;
+            background: var(--color-base);
             color: var(--color-texto);
+            line-height: 1.3;
+            padding: 20px;
         }
 
-        /* Estilo Glassmorphism 2.0 */
-        .glass-card {
-            background: var(--color-vidrio);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(122, 87, 194, 0.15);    
-            padding: 2rem;
-             box-shadow: 0 8px 32px 0 rgba(135, 31, 31, 0.37);
-        }
-
-
-
-
-
-        /* Estructura header */
+        /* Header centrado neomórfico */
         .header {
             text-align: center;
-            padding: 2rem 1rem;
-            background: linear-gradient(65deg, var(--color-primario), #cecdcc);
-            color: rgb(0, 0, 0);
+            padding: 3rem 2rem;
+            margin: 2rem auto;
+            max-width: 1200px;
+            background: var(--color-base);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-ext);
+            border: var(--border-bordo);
         }
 
- /* Nuevos estilos para header */
-
-
-        /* Nuevas secciones diferenciadas */
-        .seccion-diferenciada {
-            padding: 4rem 1rem;
-            margin: 2rem 0;
-            background: linear-gradient(45deg, rgba(255,235,243,0.1), rgba(255,245,235,0.1));
-        }
-
-        .facilidad-curso {
-            background: rgba(255, 255, 255, 0.9);
-            border-left: 5px solid var(--color-primario);
-        }
-
-        /* Nueva sección de emprendimiento */
-        .seccion-emprende {
-            background: linear-gradient(45deg, var(--color-primario), #cecdcc);
-            color: rgb(0, 0, 0);
-            text-align: left;
-            padding: 4rem 1rem;
-        }
-
-
-
-
-
-        .precio {
-            font-size: 1.5rem;
-            margin: 0.5rem 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-            color: rgb(0, 0, 0);
-        }
-
-        .btn-whatsapp {
-            background: #25D366;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
+        /* Tarjetas neomórficas */
+        .glass-card {
+            background: var(--color-base);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-ext);
+            padding: 2.5rem;
             margin: 1rem 0;
-            transition: transform 0.3s;
+            border: var(--border-bordo);
+            transition: transform 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Imágenes redondeadas con padding */
+        .imagen-destacada {
+            padding: 15px;
+            margin: 2rem auto;
+        }
+
+        .imagen-circular {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: var(--shadow-ext);
+            border: 3px solid var(--color-texto);
+        }
+
+        /* Botones neomórficos */
+        .btn-whatsapp {
+            background: var(--color-texto);
+            color: var(--color-base);
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            margin: 1.5rem 0;
+            box-shadow: var(--shadow-ext);
+            border: var(--border-bordo);
+            transition: all 0.3s ease;
         }
 
         .btn-whatsapp:hover {
-            transform: scale(1.05);
+            box-shadow: var(--color-texto);
+            color: #fff;
+            background: var(--color-acento);
         }
 
-        /* Secciones */
+        /* Secciones con espaciado aumentado */
         .seccion {
-            padding: 3rem 1rem;
+            padding: 4rem 2rem;
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 2rem auto;
         }
 
-        /* Testimonios */
+        .seccion-emprende {
+            padding: 4rem 2rem;
+            margin: 3rem auto;
+            border-radius: var(--radius);
+            background: var(--color-base);
+            box-shadow: var(--shadow-inset);
+            border-left: 8px solid var(--color-acento);
+        }
+
+        /* Testimonios con mejor espaciado */
         .testimonio-card {
             display: flex;
             align-items: center;
-            margin: 1rem 0;
-            padding: 1.5rem;
+            gap: 2rem;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-ext);
         }
 
         .testimonio-img {
-            width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto 1rem;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: var(--shadow-ext);
         }
 
-        /* Formulario */
+        /* Formulario neomórfico */
         .formulario-contacto {
-            max-width: 500px;
-            margin: 0.2rem auto;
+            max-width: 600px;
+            padding: 2rem;
+            margin: 2rem auto;
         }
-
-      
 
         input, textarea {
             width: 100%;
-            padding: 0.8rem;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 1rem;
+            padding: 1.2rem;
+            margin: 1rem 0;
+            border: none;
+            border-radius: 20px;
+            background: var(--color-base);
+            box-shadow: var(--shadow-inset);
+        }
+
+        /* Textos y precios destacados */
+        .precio {
+            font-size: 2rem;
+            margin: 1.5rem 0;
+            color: var(--color-acento);
+            padding: 1rem;
+            display: inline-block;
+            border-radius: 15px;
+        }
+
+        h2 {
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            color: var(--color-acento);
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-          
-            .testimonio-card { flex-direction: column; text-align: center; }
-            .testimonio-img { margin-bottom: 1rem; }
+            .header {
+                padding: 2rem 1rem;
+                margin: 1rem;
+            }
+            
+            .testimonio-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.5rem;
+            }
+            
+            .seccion {
+                padding: 2rem 1rem;
+            }
+            
+            .imagen-circular {
+                width: 180px;
+                height: 180px;
+            }
         }
 
         @keyframes moverFlecha {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(6px); /* Puedes ajustar la distancia */
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
+            0% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+            100% { transform: translateY(0); }
+        }
 
         #flechaabajo {
-    animation: moverFlecha 1s ease-in-out infinite;
-  }
-
-  .imagen-destacada {
-  display: inline-block;
-  position: relative;
-  margin: 20px;
-}
-
-.imagen-circular {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: top;
-  border: 3px solid white;
-  box-shadow: 0 0 25px 5px rgba(255, 255, 255, 0.6),
-             0 0 15px 3px rgba(255, 255, 255, 0.4) inset;
-  transform: translateY(-10%);
-  overflow: hidden;
-}
-
-
-    </style>
-
-
+            animation: moverFlecha 1.2s ease-in-out infinite;
+            color: var(--color-acento);
+            font-size: 2.5rem;
+            margin-top: 1rem;
+        }
+</style>
 <!-- Hotjar Tracking Code for Esperanzarte Web -->
 <script>
     (function(h,o,t,j,a,r){
@@ -319,7 +327,7 @@
 
 
 
-    <section class=" seccion-emprende" data-aos="fade-up">
+    <section class="seccion seccion-emprende" data-aos="fade-up">
         
             <h2>¿Te imaginas decorar tu hogar o emprender con este proyecto?</h2>
            <br>
@@ -335,7 +343,7 @@
                 <div class="precio">
                     <span style="text-decoration: line-through; font-size: 1rem;color: #fe6500;">Antes: $120.009</span> 
                     <span style= "font-size: 1.5rem; "> Hoy: $69.000</span>
-            <p style="font-size: 0.9rem;"> ⏳Promoción válida hasta el 10 de marzo ⏳</p>
+            <p style="font-size: 0.9rem;">Promoción válida hasta el 10 de marzo ⏳</p>
                 </div>
             
 
@@ -410,7 +418,7 @@
 
 
 
-<section class=" seccion-emprende" data-aos="fade-up">
+<section class=" seccion seccion-emprende" data-aos="fade-up">
     <div  class="seccion" class="glass-card" style="background: rgba(255,255,255,0.1);">
         <h2 style="font-size: 1.4rem;">¡Transforma tu Creatividad en Resultados!</h2>
         <p style="font-size: 1.2rem; margin: 1.5rem 0;">
